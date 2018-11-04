@@ -1,11 +1,11 @@
 # Site settings
 title: Tong one Music
-SEOTitle: tong的博客 | BY Blog
+SEOTitle: 佟一首歌 | My Blog
 header-img: img/post-bg-desk.jpg
-email: 879867005@gmail.com
+email: 879867005@qq.com
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
-url: "http://qiubaiying.github.io"          # your host, for absolute URL
+keyword: "java, html, bob, web, java web"
+url: "http://bobt2018.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
 
@@ -64,9 +64,9 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: qiubaiying.github.io    #仓库名称
-  owner: qiubaiying    #github用户名
-  admin: qiubaiying
+  repo: bobt2018.github.io    #仓库名称
+  owner: bobt2018    #github用户名
+  admin: bobt2018
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
