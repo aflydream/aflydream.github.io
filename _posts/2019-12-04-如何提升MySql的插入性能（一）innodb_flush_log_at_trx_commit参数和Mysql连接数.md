@@ -166,7 +166,8 @@ Threads fairness:
 ```
 SET GLOBAL innodb_flush_log_at_trx_commit=1;
 SHOW GLOBAL VARIABLES LIKE 'innodb_flush_log%';
-```
+```  
+
 |线程数/连接数|qps|tps|
 |:----- |:-----|----- |
 |1|17.61|17.61|
