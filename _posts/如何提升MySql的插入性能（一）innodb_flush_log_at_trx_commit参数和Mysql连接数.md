@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      如何提升MySql的插入性能
+subtitle:   如何提升MySql的插入性能（一）innodb_flush_log_at_trx_commit参数和Mysql连接数
+date:       2019-12-4
+author:     bob.tong
+header-img: img/post-bg-ios9-web.jpg
+catalog: true
+tags:
+    - mysql
+    - mysql性能
+---
+
 # 如何提升MySql的插入性能（一）innodb_flush_log_at_trx_commit参数和Mysql连接数
 
 ## 前言
