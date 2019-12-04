@@ -1,17 +1,15 @@
 ---
 layout:     post
-title:      如何提升MySql的插入性能
-subtitle:   如何提升MySql的插入性能（一）innodb_flush_log_at_trx_commit参数和Mysql连接数
+title:      如何提升MySql的插入性能（一）
+subtitle:   innodb_flush_log_at_trx_commit参数和Mysql连接数
 date:       2019-12-4
 author:     bob.tong
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/post-bg-mysql-1.jpg
 catalog: true
 tags:
     - mysql
     - mysql性能
 ---
-
-# 如何提升MySql的插入性能（一）innodb_flush_log_at_trx_commit参数和Mysql连接数
 
 ## 前言
 最近我们小组接到一个需求，客户端每秒会发送一条数据到服务端，服务端需要用保存数据，而客户端的同时并发大约为1000，持续时间大约为1小时，哇，心里有点爽，终于有点小boss可以练手了。但是经过测试，现有的程序只能撑到50并发，而罪魁祸首主要有Mysql,程序代码，Nginx等。
@@ -204,7 +202,7 @@ SHOW GLOBAL VARIABLES LIKE 'innodb_flush_log%';
 以上结果仅供参考，即使是相同运行环境相同的线程数，执行多次结果也会有很大不同，并不能代表有同样的机器同样的执行方式就能一定跑出多少qps
 
 
-# 总结
+## 总结
 #### 何为innodb_flush_log_at_trx_commit？
 从测试结果看设置innodb_flush_log_at_trx_commit=2后吞吐率大大提升，那么何为innodb_flush_log_at_trx_commit？  
 **简而言之，innodb_flush_log_at_trx_commit 参数指定了 InnoDB 在事务提交后的日志写入频率**。  
@@ -231,13 +229,13 @@ SHOW GLOBAL VARIABLES LIKE 'innodb_flush_log%';
 当节约的时间和浪费的时间达到一个平衡点以后，这种优势将不存在  
 虽然这种方式可以加大吞吐率，但是我们不建议这种方式，因为线程数越多系统浪费的资源也会越多
 
-# 后言
+## 后言
 事实上，设置innodb_flush_log_at_trx_commit时候我们还是需要根据具体的需求，在一般对于数据完整性不是很高的情况下，我们可以根据公式**连接数 = ((核心数 * 2) + 有效磁盘数**进行设置，但是公式不是绝对的，想要最佳性能还需要多次测试才行，不同运行环境都会有很大差异，即使是相同的运行环境也不能测试一次就找到最佳的连接数。  
 即使对于数据完整性和可用性高，可以适当加大连接数，也不要将连接数设置过大，这样会造成系统资源的浪费，往往三高（高性能，高并发，高可用）中有一个最重要的，而不能完全兼得。  
 
 我们知道了如何提升mysql的插入性能，那么程序连接数据库后如何提升呢？我们从程序连接mysql通常会有四个参数需要设置，初始化连接数，最小连接数，最大连接数，过期时间，这些参数要设置多少才合适呢？且听下回分解
 
-# 本篇文章离不开以下优秀的作者  
+## 本篇文章离不开以下优秀的作者  
 [数据库连接池到底应该设置多大?](https://blog.csdn.net/w05980598/article/details/78797310)  
 [CPU 扫盲（核心数/线程数）](https://durant35.github.io/2017/05/16/hsw_CPUWipeoutIlliteracy/)  
 [详解MySQL基准测试和sysbench工具](https://www.cnblogs.com/kismetv/p/7615738.html)  
