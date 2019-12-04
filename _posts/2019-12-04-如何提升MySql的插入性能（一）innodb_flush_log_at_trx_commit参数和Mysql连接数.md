@@ -4,7 +4,7 @@ title:      如何提升MySql的插入性能（一）
 subtitle:   innodb_flush_log_at_trx_commit参数和Mysql连接数
 date:       2019-12-4
 author:     bob.tong
-header-img: img/post-bg-mysql-2.jpg
+header-img: img/post-bg-mysql-3.jpg
 catalog: true
 tags:
     - mysql
