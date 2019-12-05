@@ -19,10 +19,10 @@ sidebar-avatar: /img/bobt.jpg    # use absolute URL, seeing it's used in both `/
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-zhihu_username:     bobt2018
-github_username:    bobt2018
-facebook_username:  bobt2018
-jianshu_username:   bobt2018
+zhihu_username:     bobtong
+github_username:    bobtong
+facebook_username:  bobtong
+jianshu_username:   bobtong
 #twitter_username:   qiubaiying
 
 
@@ -61,7 +61,7 @@ kramdown:
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: false    #是否开启Gitalk评论
   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
   repo: bobt2018.github.io    #仓库名称
@@ -99,16 +99,7 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
-    },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
-    },{
-        title: "Apple",
-        href: "https://apple.com"
-    },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "简书·Bobt",
+        href: "https://www.jianshu.com/u/5312b6adf16e"
     }
 ]
